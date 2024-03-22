@@ -1,0 +1,12 @@
+{
+  "extends": "@gplane/tsconfig",
+  "compilerOptions": {
+    "target": "es2022",
+    "declaration": false,
+    "sourceMap": false,
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "alwaysStrict": false,
+    "types": ["typed-query-selector"]
+  }
+}

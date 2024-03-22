@@ -1,0 +1,19 @@
+{
+  "name": "old-school-linguist-colors",
+  "description": "Change some GitHub linguist colors to old-school style.",
+  "author": "Pig Fang <g-plane@hotmail.com>",
+  "version": "0.1.0",
+  "repository": "g-plane/old-school-linguist-colors",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p .",
+    "fmt": "dprint fmt",
+    "fmt:check": "dprint check"
+  },
+  "devDependencies": {
+    "@gplane/tsconfig": "^6.1.0",
+    "dprint": "^0.45.0",
+    "typed-query-selector": "^2.11.2",
+    "typescript": "^5.4.3"
+  }
+}
