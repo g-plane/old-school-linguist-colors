@@ -2,7 +2,7 @@
   "name": "old-school-linguist-colors",
   "description": "Change some GitHub linguist colors to old-school style.",
   "author": "Pig Fang <g-plane@hotmail.com>",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": "g-plane/old-school-linguist-colors",
   "private": true,
   "scripts": {

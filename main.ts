@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Old-school GitHub Linguist Colors
 // @namespace    https://gplane.win/
-// @version      0.1.0
+// @version      0.2.0
 // @description  Change some GitHub linguist colors to old-school style.
 // @author       Pig Fang
 // @license      MIT
