@@ -32,8 +32,11 @@
     Object.entries(colorsMap).forEach(([from, to]) => {
       document.querySelectorAll<HTMLElement>(`[style*="${from}" i]`).forEach((element) => {
         element.style.cssText = element.style.cssText.replaceAll(rgbMap[from]!, to)
-        element.style.border = 'unset'
       })
+    })
+
+    document.querySelectorAll('span.repo-language-color').forEach((element) => {
+      element.style.border = 'unset'
     })
   })
   observer.observe(document.body, { subtree: true, childList: true })
