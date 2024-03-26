@@ -30,14 +30,44 @@
 
   const observer = new MutationObserver(() => {
     Object.entries(colorsMap).forEach(([from, to]) => {
+      const rgbFrom = rgbMap[from]!
+
       document.querySelectorAll<HTMLElement>(`[style*="${from}" i]`).forEach((element) => {
-        element.style.cssText = element.style.cssText.replaceAll(rgbMap[from]!, to)
+        element.style.cssText = element.style.cssText.replaceAll(rgbFrom, to)
+        element.style.border = 'unset'
       })
+
+      document.querySelectorAll('div[data-testid="results-list"] ul div > div')
+        .forEach((element) => {
+          element.style.display = 'none'
+          if (window.getComputedStyle(element).backgroundColor === rgbFrom) {
+            element.style.backgroundColor = to
+          }
+          element.style.borderWidth = '0'
+          element.style.borderColor = 'unset'
+          element.style.width = '12px'
+          element.style.height = '12px'
+          element.style.display = 'block'
+        })
+
+      document.querySelectorAll(
+        '[data-testid="desktop-filters"] > ul > li:nth-child(3) a > span > div'
+      )
+        .forEach((element) => {
+          element.style.display = 'none'
+          if (window.getComputedStyle(element).backgroundColor === rgbFrom) {
+            element.style.backgroundColor = to
+          }
+          element.style.borderWidth = '0'
+          element.style.borderColor = 'unset'
+          element.style.display = 'block'
+        })
     })
 
     document.querySelectorAll('span.repo-language-color').forEach((element) => {
       element.style.border = 'unset'
     })
   })
+
   observer.observe(document.body, { subtree: true, childList: true })
 })()
