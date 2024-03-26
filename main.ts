@@ -32,6 +32,7 @@
     Object.entries(colorsMap).forEach(([from, to]) => {
       document.querySelectorAll<HTMLElement>(`[style*="${from}" i]`).forEach((element) => {
         element.style.cssText = element.style.cssText.replaceAll(rgbMap[from]!, to)
+        element.style.border = 'unset'
       })
     })
   })
