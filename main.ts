@@ -62,6 +62,19 @@
           element.style.borderColor = 'unset'
           element.style.display = 'block'
         })
+
+      document.querySelectorAll(
+        '[data-testid="list-view-item-main-content"] > div > div > div > div > div > div > div'
+      )
+        .forEach((element) => {
+          element.style.display = 'none'
+          if (window.getComputedStyle(element).backgroundColor === rgbFrom) {
+            element.style.backgroundColor = to
+          }
+          element.style.borderWidth = '0'
+          element.style.borderColor = 'unset'
+          element.style.display = 'block'
+        })
     })
 
     document.querySelectorAll('span.repo-language-color').forEach((element) => {
