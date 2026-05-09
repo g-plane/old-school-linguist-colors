@@ -11,9 +11,9 @@
     "fmt:check": "dprint check"
   },
   "devDependencies": {
-    "@gplane/tsconfig": "^6.1.0",
-    "dprint": "^0.45.0",
-    "typed-query-selector": "^2.11.2",
-    "typescript": "^5.4.3"
+    "@gplane/tsconfig": "^6.4.2",
+    "dprint": "^0.54.0",
+    "typed-query-selector": "^2.12.2",
+    "typescript": "^6.0.3"
   }
 }

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // ==UserScript==
 // @name         Old-school GitHub Linguist Colors
 // @namespace    https://gplane.win/
