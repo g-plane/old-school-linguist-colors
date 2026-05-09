@@ -25,7 +25,7 @@
         g = Number.parseInt(color.slice(3, 5), 16),
         b = Number.parseInt(color.slice(5, 7), 16)
       return [color, `rgb(${r}, ${g}, ${b})`]
-    })
+    }),
   )
 
   const observer = new MutationObserver(() => {
@@ -51,7 +51,7 @@
         })
 
       document.querySelectorAll(
-        '[data-testid="desktop-filters"] > ul > li:nth-child(3) a > span > div'
+        '[data-testid="desktop-filters"] > ul > li:nth-child(3) a > span > div',
       )
         .forEach((element) => {
           element.style.display = 'none'
@@ -64,7 +64,7 @@
         })
 
       document.querySelectorAll(
-        '[data-testid="list-view-item-main-content"] > div > div > div > div > div > div > div'
+        '[data-testid="list-view-item-main-content"] > div > div > div > div > div > div > div',
       )
         .forEach((element) => {
           element.style.display = 'none'
