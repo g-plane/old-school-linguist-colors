@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // ==UserScript==
 // @name         Old-school GitHub Linguist Colors
 // @namespace    https://gplane.win/
-// @version      0.2.1
+// @version      0.2.2
 // @description  Change some GitHub linguist colors to old-school style.
 // @author       Pig Fang
 // @license      MIT
@@ -31,6 +31,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
             document.querySelectorAll(`[style*="${from}" i]`).forEach((element) => {
                 element.style.cssText = element.style.cssText.replaceAll(rgbFrom, to);
                 element.style.border = 'unset';
+            });
+            document.querySelectorAll(`[style*="${rgbFrom}" i]`).forEach((element) => {
+                element.style.cssText = element.style.cssText.replaceAll(rgbFrom, to);
             });
             document.querySelectorAll('div[data-testid="results-list"] ul div > div')
                 .forEach((element) => {
