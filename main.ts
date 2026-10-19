@@ -36,6 +36,9 @@
         element.style.cssText = element.style.cssText.replaceAll(rgbFrom, to)
         element.style.border = 'unset'
       })
+      document.querySelectorAll<HTMLElement>(`[style*="${rgbFrom}" i]`).forEach((element) => {
+        element.style.cssText = element.style.cssText.replaceAll(rgbFrom, to)
+      })
 
       document.querySelectorAll('div[data-testid="results-list"] ul div > div')
         .forEach((element) => {
